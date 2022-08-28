@@ -1,3 +1,5 @@
+import { ThrowStmt } from "@angular/compiler";
+
 export class Satellite {
 
 	name: string;
@@ -14,10 +16,14 @@ export class Satellite {
 		this.operational = operational;
    }
 	
+   // TODO 3a: fix isSpaceDebris check
 	isSpaceDebris(): boolean {
-		return true;
+		if (this.type === "Space Debris") {
+			return true;
+		} else {
+			return false;
+		}
    }
-
 }
 
-// TODO 3a: fix isSpaceDebris check
+

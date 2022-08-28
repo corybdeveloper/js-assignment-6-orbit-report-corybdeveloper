@@ -1,3 +1,4 @@
+import { getCurrencySymbol } from '@angular/common';
 import { Component, OnInit, Input } from '@angular/core';
 import { Satellite } from '../satellite';
 
@@ -22,7 +23,7 @@ export class OrbitListComponent implements OnInit {
 				return -1;
 			} else if (a[column] > b[column]) {
 				return 1;
-			}
+			} else 
 			return 0;
 		});
 	}
